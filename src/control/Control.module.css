@@ -1,0 +1,25 @@
+.control {
+    box-sizing: border-box;
+    background-color: var(--bg-settings);
+    border: 6px solid var(--border);
+    display: flex;
+    height: 4rem;
+    width: 100%;
+}
+
+.moves, .timer {
+    align-items: center;
+    background-color: var(--bg-card);
+    border-radius: 6px;
+    color: #fff;
+    display: flex;
+    font-size: 1.2rem;
+    height: 80%;
+    justify-content: center;
+    margin: auto 0 auto 6px;
+    padding: 0 15px;
+}
+
+.movesRemainder, .timeRemainder { color: #fff; }
+
+.movesRemainderRed, .timeRemainderRed { color: #F00; }

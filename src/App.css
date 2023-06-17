@@ -1,0 +1,24 @@
+:root {
+  --transition-duration: 0s;
+
+  --bg-board: #dddfea;
+  --bg-card: #5c59ae;
+  --bg-settings: #b5bae4;
+  --border: #28225b;
+
+  --columns-s: 4;
+  --columns-m: 5;
+  --columns-l: 5;
+}
+
+body {
+  background-color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}
+
+.App {
+  margin: auto;
+  max-width: 792px;
+  width: 100%;
+}

@@ -1,0 +1,44 @@
+.board {
+    background-color: var(--bg-board);
+    border-left: 6px solid var(--border);
+    border-right: 6px solid var(--border);
+    box-sizing: border-box;
+    display: flex;
+    height: fit-content;
+    position: relative;
+    width: 100%;
+}
+
+.cardsContainer {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 4px;
+    width: 100%;
+}
+
+@media screen and (max-width: 359px) {
+    .board { min-height: 520px; }
+
+    .cardsContainer { max-width: calc(150px * var(--columns-s)); }
+}
+
+@media screen and (min-width: 360px) and (max-width: 439px) {
+    .board { min-height: 560px; }
+
+    .cardsContainer{ max-width: calc(150px * var(--columns-m)); } 
+}
+
+@media screen and (min-width: 440px) and (max-width: 575px) {
+    .board { min-height: 640px; }
+
+    .cardsContainer{ max-width: calc(150px * var(--columns-m)); } 
+}
+
+@media screen and (min-width: 576px) {
+    .board { min-height: 700px; }
+
+    .cardsContainer{ max-width: calc(150px * var(--columns-l)); } 
+}

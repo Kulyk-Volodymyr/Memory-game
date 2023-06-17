@@ -1,0 +1,118 @@
+
+.card {
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    margin: 4px;
+    max-width: 130px;
+}
+
+@media screen and (max-width: 359px) {
+    .card {
+        flex:  1 1 calc( 100%  / var(--columns-s)  - 10px );
+        width: calc( 100%  / var(--columns-s) );
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 575px) {
+    .card {
+        flex:  1 1 calc( 100%  / var(--columns-m)  - 10px );
+        width: calc( 100%  / var(--columns-m) );
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .card {
+        flex:  1 1 calc( 100%  / var(--columns-l)  - 10px );
+        width: calc( 100%  / var(--columns-l) );
+    } 
+}
+
+.cardWrapper {
+    background: none;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.cardContainer {
+    position: relative;
+    transform-style: preserve-3d;
+    transition-property: all;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: ease;
+    height: 100%;
+    width: 100%;
+}
+
+.cardInvisible {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.cardTransparent { pointer-events: none; }
+
+.imageTransparent { opacity: .3; }
+
+.cardFrontSide {
+    align-items: center;
+    backface-visibility: hidden;
+    background: var(--bg-card);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.cardBackSide {
+    backface-visibility: hidden;
+    position: absolute;
+    transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+}
+
+.cardBackSideImage {
+    background-size: cover;
+    position: relative;
+}
+
+@media screen and (max-width: 279px) {
+    .cardBackSideImage  {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 319px) {
+    .cardBackSideImage  {
+        height: 90%;
+        left: 5%;
+        top: 5%;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .cardBackSideImage  {
+        height: 70%;
+        left: 15%;
+        top: 15%;
+        width: 72%;
+    }
+}
+
+.flipCard { transform: rotateY(180deg); }
+
+.numberVisible {
+    color: #fff;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+.numberInvisible { visibility: hidden; }
